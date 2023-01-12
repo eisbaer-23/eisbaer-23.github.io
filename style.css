@@ -1,38 +1,57 @@
 @font-face {
-  font-family: poppins;
-  src: url(/Poppins,Raleway/Poppins/Poppins-Regular.ttf);
+  font-family: raleway;
+  src: url(/Raleway/Raleway-VariableFont_wght.ttf);
 }
 header {
   position: relative;
   z-index: 900;
-  background-color: #EDECEB;
+  background-color: white;
+  position: sticky;
   top: 0;
   display: flex;
   flex-direction: row;
-  height: calc(3vw + 5vh);
-  font-family: poppins;
+  height: calc(5vw + 5vh);
+  font-family: raleway;
   font-size: 2vw;
 }
-header img {
-  height: calc(7.5vw + 5vh);
-  margin-left: 1rem;
+header a {
+  text-decoration: none;
+  padding-top: 1rem;
+  margin: 0;
+}
+header img{
+height: calc(9vw + 5vh);
+margin-left: 1rem;
+}
+header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+header div a {
+  text-decoration: none;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  padding-top: 1rem;
 }
 body {
-  font-family: poppins;
   margin: 0;
 }
 #hero-section {
   background: url("/pictures/background.jpg") no-repeat center center;
   background-size: auto;
-  z-index: 10;
   background-size: cover;
-  height: calc(70vh - 3vw - 5vh + 30px);
+  height: calc(100vh - 5vw - 5vh);
   width: 100%;
 }
 
 .top-tilt {
   position: relative;
-  top: 0;
+  position: sticky;
+  top: calc(5vw + 5vh);;
   display: flex;
   flex-direction: column;
   z-index: 500;
@@ -43,60 +62,5 @@ body {
 }
 
 .top-tilt .shape-fill {
-  fill: #EDECEB;
-}
-main div article{
-  font-size: 2rem;
-}
-#content {
-  transform: translateY(3vw);
-  z-index: 50;
-  background-color: white;
-}
-#navigation-element {
-  position: sticky;
-  top: 0;
-  height: 5vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 3vw;
-  background-color: #EDECEB;
-  z-index: 50;
-}
-#navigation-element a {
-  text-decoration: none;
-  color: black;
-  padding-left: 4vw;
-  padding-right: 4vw;
-}
-.top-navigation-tilt {
-  visibility: hidden;
-  position: absolute;
-  z-index: 30;
-  width: 100%;
-  overflow: hidden;
-  height: 30px;
-  transform: translateY(-29px) rotate(180deg);
-  display: flex;
-  flex-direction: column;
-}
-
-.top-navigation-tilt svg{
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 30px;
-}
-
-.top-navigation-tilt .shape-fill {
-  fill: #EDECEB;
-}
-#navigation-shaddow{
-  position: sticky;
-  top: 5vw;
-  height: 2px;
-  z-index: 60;
-  background-color: rgb(158, 157, 157);
+  fill: #FFFFFF;
 }
