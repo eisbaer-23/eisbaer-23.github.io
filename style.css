@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: poppins;
   src: url(/Poppins,Raleway/Poppins/Poppins-Regular.ttf);
@@ -53,50 +56,44 @@ main div article{
   z-index: 50;
   background-color: white;
 }
+#navigation-element{
+  display: none;
+}
+@media (min-width: 1022px) {
 #navigation-element {
   position: sticky;
   top: 0;
-  height: 5vw;
+  height: 3rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 3vw;
+  font-size: 2.5rem;
   background-color: #EDECEB;
   z-index: 50;
+  border-bottom: solid 2px;
+  border-bottom-color: rgb(158, 157, 157);
 }
 #navigation-element a {
+  display: inline-flex;
   text-decoration: none;
   color: black;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  transition: transform 0.2s;
 }
-.top-navigation-tilt {
-  visibility: hidden;
+#navigation-bar a {
+  margin-left: 3.3vw;
+  margin-right: 3.3vw;
+}
+#navigation-mascott {
   position: absolute;
-  z-index: 30;
-  width: 100%;
-  overflow: hidden;
-  height: 30px;
-  transform: translateY(-29px) rotate(180deg);
-  display: flex;
-  flex-direction: column;
+  left: 1vw;
 }
-
-.top-navigation-tilt svg{
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 30px;
+#navigation-element img{
+  padding-top: 0.2rem;
+  height: 2.4rem;
+  width: 2.4rem;
 }
-
-.top-navigation-tilt .shape-fill {
-  fill: #EDECEB;
+a:hover{
+  transform: scale(1.1);
 }
-#navigation-shaddow{
-  position: sticky;
-  top: 5vw;
-  height: 2px;
-  z-index: 60;
-  background-color: rgb(158, 157, 157);
 }
