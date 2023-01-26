@@ -17,8 +17,9 @@ header {
   font-size: 2vw;
 }
 header img {
-  height: calc(7.5vw + 5vh);
+  height: calc(3vw + 5vh);
   margin-left: 1rem;
+  margin-top: 1vh;
 }
 body {
   font-family: poppins;
@@ -40,11 +41,15 @@ body {
   flex-direction: column;
   z-index: 500;
   display: block;
-  width: 100%;
   height: 0px;
+}
+.top-tilt svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: calc(1vw * 5);
   transform: rotateY(180deg);
 }
-
 .top-tilt .shape-fill {
   fill: #EDECEB;
 }
@@ -56,10 +61,13 @@ main div article{
   z-index: 50;
   background-color: white;
 }
-#navigation-element{
-  display: none;
-}
-@media (min-width: 1022px) {
+#navigation-element a{
+  visibility: collapse;
+    display: inline-flex;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.2s;
+ }
 #navigation-element {
   position: sticky;
   top: 0;
@@ -73,27 +81,25 @@ main div article{
   z-index: 50;
   border-bottom: solid 2px;
   border-bottom-color: rgb(158, 157, 157);
-}
+}@media (min-width: 1022px) {
 #navigation-element a {
-  display: inline-flex;
-  text-decoration: none;
-  color: black;
-  transition: transform 0.2s;
+  visibility: visible;
 }
 #navigation-bar a {
   margin-left: 3.3vw;
   margin-right: 3.3vw;
+}
 }
 #navigation-mascott {
   position: absolute;
   left: 1vw;
 }
 #navigation-element img{
+  visibility: visible;
   padding-top: 0.2rem;
   height: 2.4rem;
   width: 2.4rem;
 }
 a:hover{
   transform: scale(1.1);
-}
 }
