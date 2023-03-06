@@ -1,4 +1,4 @@
-let hover = false;
+let isHoveringOverMenuToggle = false;
 let click = 'click';
 let eventX = function (event) { return event.clientX; };
 let starhover = 'mouseover';
@@ -10,16 +10,16 @@ if ('ontouchstart' in window) {
   eventX = function (event) { return event.touches[0].clientX; };
 }
 document.getElementById('hamburger-menu').addEventListener(starhover, function (event) {
-  hover = true;
+  isHoveringOverMenuToggle = true;
 });
 document.getElementById('hamburger-menu').addEventListener(endhover, function (event) {
-  hover = false;
+  isHoveringOverMenuToggle = false;
 });
 document.addEventListener(click, function (event) {
   if (eventX(event) > 100) {
     const cb = document.querySelector('#menu__toggle');
     if (cb.checked === true) {
-      if (hover === false) {
+      if (isHoveringOverMenuToggle === false) {
         cb.checked = false;
       }
     }

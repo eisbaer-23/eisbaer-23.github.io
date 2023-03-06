@@ -70,8 +70,8 @@ body {
   fill: var(--headercolor);
 }
 #content {
-  margin-left: 1rem;
   margin-right: 1rem;
+  margin-left: 1rem;
   font-size: 1rem;
   z-index: 50;
   background-color: var(--maincolor);
